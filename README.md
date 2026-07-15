@@ -8,3 +8,13 @@ see [README](https://github.com/AMD-DEV-CONTEST/Radeon-hackathon-2026-07/blob/ma
 
 > [!NOTE]
 > All submission materials, project descriptions, and Pull Requests should be submitted in English.
+
+## Modeling simulation
+
+This branch includes a minimal MuJoCo robot body demo.
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe simulation\minimal_robot_demo.py
+```
