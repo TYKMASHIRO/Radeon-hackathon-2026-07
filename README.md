@@ -84,3 +84,16 @@ What you'll learn:
 4. **Demonstration Video** (Recommended Length 3~5 minutes)
    - The video should demonstrate the complete workflow of the project, including command-line and/or GUI operations, execution procedures, and results
 5. **Supplementary materials** in other formats may be submitted to demonstrate the value of the proposed technical solution.
+
+## Vision-based runway perception & takeoff control
+
+[`vision/`](vision) is an open release — raw dataset (350 sorties, 156K
+labeled frames), open weights (0.48M params), and the control law that turned
+them into telemetry-free takeoffs (max centerline deviation 0.55 m). Trained
+on ROCm (gfx906), deployed via MIGraphX at 2110 frames/s. Everything is in
+[vision/README.md](vision/README.md).
+
+```powershell
+pip install numpy opencv-python onnxruntime
+python vision\inference.py vision\assets\sample_frames\frame_00.jpg
+```
