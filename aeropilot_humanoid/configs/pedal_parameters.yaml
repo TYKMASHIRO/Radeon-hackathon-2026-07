@@ -1,0 +1,26 @@
+stick:
+  roll_range_rad: [-0.30, 0.30]
+  pitch_range_rad: [-0.30, 0.30]
+  stiffness_nm_rad: 5.0
+  damping_nms_rad: 0.15
+  frictionloss_nm: 0.05
+  moving_mass_kg: 0.30
+  handle_length_m: 0.20
+throttle:
+  travel_m: 0.16
+  damping_ns_m: 4.0
+  frictionloss_n: 2.0
+  moving_mass_kg: 0.25
+rudder:
+  pedal_travel_m: 0.06
+  stiffness_n_m: 150.0
+  damping_ns_m: 12.0
+  frictionloss_n: 1.0
+  pedal_mass_kg_each: 0.60
+brakes:
+  range_rad: [0.0, 0.35]
+  stiffness_nm_rad: 8.0
+  damping_nms_rad: 0.8
+  frictionloss_nm: 0.10
+  plate_mass_kg_each: 0.20
+design_status: "Passive mechanism seed values; identify from the competition cockpit hardware before final validation."

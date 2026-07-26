@@ -1,0 +1,536 @@
+{
+  "left": {
+    "source": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\third_party\\linkerhand-urdf\\o6\\left\\linkerhand_o6_left.urdf",
+    "robot_name": "linkerhand_o6_left",
+    "load_success": true,
+    "root_links": [
+      "lh_hand_base_link"
+    ],
+    "link_count": 12,
+    "joint_count": 11,
+    "independent_joint_count": 6,
+    "passive_mimic_joint_count": 5,
+    "independent_joint_names": [
+      "lh_thumb_cmc_yaw",
+      "lh_thumb_cmc_pitch",
+      "lh_index_mcp_pitch",
+      "lh_middle_mcp_pitch",
+      "lh_ring_mcp_pitch",
+      "lh_pinky_mcp_pitch"
+    ],
+    "passive_mimic_joint_names": [
+      "lh_thumb_ip",
+      "lh_index_dip",
+      "lh_middle_dip",
+      "lh_ring_dip",
+      "lh_pinky_dip"
+    ],
+    "joints": [
+      {
+        "name": "lh_thumb_cmc_yaw",
+        "joint_type": "revolute",
+        "parent": "lh_hand_base_link",
+        "child": "lh_thumb_metacarpals_base2",
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.3,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "lh_thumb_cmc_pitch",
+        "joint_type": "revolute",
+        "parent": "lh_thumb_metacarpals_base2",
+        "child": "lh_thumb_metacarpals",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 0.58,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "lh_thumb_ip",
+        "joint_type": "revolute",
+        "parent": "lh_thumb_metacarpals",
+        "child": "lh_thumb_distal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.08,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": "lh_thumb_cmc_pitch",
+        "mimic_multiplier": 2.29,
+        "mimic_offset_rad": 0.0,
+        "role": "passive_mimic"
+      },
+      {
+        "name": "lh_index_mcp_pitch",
+        "joint_type": "revolute",
+        "parent": "lh_hand_base_link",
+        "child": "lh_index_proximal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.6,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "lh_index_dip",
+        "joint_type": "revolute",
+        "parent": "lh_index_proximal",
+        "child": "lh_index_distal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.43,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": "lh_index_mcp_pitch",
+        "mimic_multiplier": 0.89,
+        "mimic_offset_rad": 0.0,
+        "role": "passive_mimic"
+      },
+      {
+        "name": "lh_middle_mcp_pitch",
+        "joint_type": "revolute",
+        "parent": "lh_hand_base_link",
+        "child": "lh_middle_proximal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.6,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "lh_middle_dip",
+        "joint_type": "revolute",
+        "parent": "lh_middle_proximal",
+        "child": "lh_middle_distal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.43,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": "lh_middle_mcp_pitch",
+        "mimic_multiplier": 0.89,
+        "mimic_offset_rad": 0.0,
+        "role": "passive_mimic"
+      },
+      {
+        "name": "lh_ring_mcp_pitch",
+        "joint_type": "revolute",
+        "parent": "lh_hand_base_link",
+        "child": "lh_ring_proximal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.6,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "lh_ring_dip",
+        "joint_type": "revolute",
+        "parent": "lh_ring_proximal",
+        "child": "lh_ring_distal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.43,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": "lh_ring_mcp_pitch",
+        "mimic_multiplier": 0.89,
+        "mimic_offset_rad": 0.0,
+        "role": "passive_mimic"
+      },
+      {
+        "name": "lh_pinky_mcp_pitch",
+        "joint_type": "revolute",
+        "parent": "lh_hand_base_link",
+        "child": "lh_pinky_proximal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.6,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "lh_pinky_dip",
+        "joint_type": "revolute",
+        "parent": "lh_pinky_proximal",
+        "child": "lh_pinky_distal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.43,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": "lh_pinky_mcp_pitch",
+        "mimic_multiplier": 0.89,
+        "mimic_offset_rad": 0.0,
+        "role": "passive_mimic"
+      }
+    ],
+    "meshes": [
+      "meshes/hand_base_link.STL",
+      "meshes/thumb_metacarpals_base2.STL",
+      "meshes/thumb_metacarpals.STL",
+      "meshes/thumb_distal.STL",
+      "meshes/index_proximal.STL",
+      "meshes/index_distal.STL",
+      "meshes/middle_proximal.STL",
+      "meshes/middle_distal.STL",
+      "meshes/ring_proximal.STL",
+      "meshes/ring_distal.STL",
+      "meshes/pinky_proximal.STL",
+      "meshes/pinky_distal.STL"
+    ],
+    "missing_meshes": [],
+    "urdf_total_mass_kg": 0.11385611280331472,
+    "all_link_inertias_positive_definite": true,
+    "raw_mujoco_compile": {
+      "bodies_including_world": 12,
+      "joints": 11,
+      "qpos": 11,
+      "dofs": 11,
+      "actuators": 0,
+      "sensors": 0,
+      "dynamic_mass_kg": 0.04656258898666621,
+      "arrays_finite": true
+    },
+    "root_mass_preserved_by_raw_compile": false,
+    "conversion_note": "The raw URDF compiles, but MuJoCo fuses the fixed root link into the world. The compiled dynamic mass therefore omits the root-link mass. Phase 2 must preserve the root as an attachable body and recreate all mimic constraints."
+  },
+  "right": {
+    "source": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\third_party\\linkerhand-urdf\\o6\\right\\linkerhand_o6_right.urdf",
+    "robot_name": "linkerhand_o6_right",
+    "load_success": true,
+    "root_links": [
+      "rh_hand_base_link"
+    ],
+    "link_count": 12,
+    "joint_count": 11,
+    "independent_joint_count": 6,
+    "passive_mimic_joint_count": 5,
+    "independent_joint_names": [
+      "rh_thumb_cmc_yaw",
+      "rh_thumb_cmc_pitch",
+      "rh_index_mcp_pitch",
+      "rh_middle_mcp_pitch",
+      "rh_ring_mcp_pitch",
+      "rh_pinky_mcp_pitch"
+    ],
+    "passive_mimic_joint_names": [
+      "rh_thumb_ip",
+      "rh_index_dip",
+      "rh_middle_dip",
+      "rh_ring_dip",
+      "rh_pinky_dip"
+    ],
+    "joints": [
+      {
+        "name": "rh_thumb_cmc_yaw",
+        "joint_type": "revolute",
+        "parent": "rh_hand_base_link",
+        "child": "rh_thumb_metacarpals_base2",
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.36,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "rh_thumb_cmc_pitch",
+        "joint_type": "revolute",
+        "parent": "rh_thumb_metacarpals_base2",
+        "child": "rh_thumb_metacarpals",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 0.58,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "rh_thumb_ip",
+        "joint_type": "revolute",
+        "parent": "rh_thumb_metacarpals",
+        "child": "rh_thumb_distal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.08,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": "rh_thumb_cmc_pitch",
+        "mimic_multiplier": 1.86,
+        "mimic_offset_rad": 0.0,
+        "role": "passive_mimic"
+      },
+      {
+        "name": "rh_index_mcp_pitch",
+        "joint_type": "revolute",
+        "parent": "rh_hand_base_link",
+        "child": "rh_index_proximal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.6,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "rh_index_dip",
+        "joint_type": "revolute",
+        "parent": "rh_index_proximal",
+        "child": "rh_index_distal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.43,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": "rh_index_mcp_pitch",
+        "mimic_multiplier": 0.89,
+        "mimic_offset_rad": 0.0,
+        "role": "passive_mimic"
+      },
+      {
+        "name": "rh_middle_mcp_pitch",
+        "joint_type": "revolute",
+        "parent": "rh_hand_base_link",
+        "child": "rh_middle_proximal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.6,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "rh_middle_dip",
+        "joint_type": "revolute",
+        "parent": "rh_middle_proximal",
+        "child": "rh_middle_distal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.43,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": "rh_middle_mcp_pitch",
+        "mimic_multiplier": 0.89,
+        "mimic_offset_rad": 0.0,
+        "role": "passive_mimic"
+      },
+      {
+        "name": "rh_ring_mcp_pitch",
+        "joint_type": "revolute",
+        "parent": "rh_hand_base_link",
+        "child": "rh_ring_proximal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.6,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "rh_ring_dip",
+        "joint_type": "revolute",
+        "parent": "rh_ring_proximal",
+        "child": "rh_ring_distal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.43,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": "rh_ring_mcp_pitch",
+        "mimic_multiplier": 0.89,
+        "mimic_offset_rad": 0.0,
+        "role": "passive_mimic"
+      },
+      {
+        "name": "rh_pinky_mcp_pitch",
+        "joint_type": "revolute",
+        "parent": "rh_hand_base_link",
+        "child": "rh_pinky_proximal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.6,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "rh_pinky_dip",
+        "joint_type": "revolute",
+        "parent": "rh_pinky_proximal",
+        "child": "rh_pinky_distal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.43,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": "rh_pinky_mcp_pitch",
+        "mimic_multiplier": 0.89,
+        "mimic_offset_rad": 0.0,
+        "role": "passive_mimic"
+      }
+    ],
+    "meshes": [
+      "meshes/hand_base_link.STL",
+      "meshes/thumb_metacarpals_base2.STL",
+      "meshes/thumb_metacarpals.STL",
+      "meshes/thumb_distal.STL",
+      "meshes/index_proximal.STL",
+      "meshes/index_distal.STL",
+      "meshes/middle_proximal.STL",
+      "meshes/middle_distal.STL",
+      "meshes/ring_proximal.STL",
+      "meshes/ring_distal.STL",
+      "meshes/pinky_proximal.STL",
+      "meshes/pinky_distal.STL"
+    ],
+    "missing_meshes": [],
+    "urdf_total_mass_kg": 0.113956201154497,
+    "all_link_inertias_positive_definite": true,
+    "raw_mujoco_compile": {
+      "bodies_including_world": 12,
+      "joints": 11,
+      "qpos": 11,
+      "dofs": 11,
+      "actuators": 0,
+      "sensors": 0,
+      "dynamic_mass_kg": 0.046555421544547004,
+      "arrays_finite": true
+    },
+    "root_mass_preserved_by_raw_compile": false,
+    "conversion_note": "The raw URDF compiles, but MuJoCo fuses the fixed root link into the world. The compiled dynamic mass therefore omits the root-link mass. Phase 2 must preserve the root as an attachable body and recreate all mimic constraints."
+  }
+}

@@ -1,0 +1,1413 @@
+{
+  "phase": 0,
+  "status": "passed_with_open_integration_risks",
+  "initial_workspace_state": {
+    "branch": "feature/modeling-simulation",
+    "tracked_project_files": [
+      "README.md",
+      "requirements.txt",
+      "simulation/minimal_robot_demo.py",
+      "Radeon-Cloud-User Guide/README.md"
+    ],
+    "finding": "No official G1 or O6 model existed before this audit."
+  },
+  "official_resources": {
+    "manifest": {
+      "generated_on": "2026-07-16",
+      "policy": "Official source trees are unmodified; all adaptations go to models/derived.",
+      "sources": {
+        "unitree_mujoco": {
+          "repository": "https://github.com/unitreerobotics/unitree_mujoco.git",
+          "branch": "main",
+          "commit": "ae6a8403e272733e9996ef59990880330496177f",
+          "commit_date": "2026-06-04T21:10:20+08:00",
+          "downloaded_on": "2026-07-16",
+          "license": "BSD-3-Clause",
+          "license_copy": "third_party/licenses/unitree_mujoco_LICENSE",
+          "files": [
+            "unitree_robots/g1/g1_29dof.xml",
+            "unitree_robots/g1/meshes/"
+          ],
+          "modified": false
+        },
+        "unitree_ros": {
+          "repository": "https://github.com/unitreerobotics/unitree_ros.git",
+          "branch": "master",
+          "commit": "d96d8f63ae17a7108d4f7229c00ef875ba7129c9",
+          "commit_date": "2026-07-08T17:30:46+08:00",
+          "downloaded_on": "2026-07-16",
+          "license": "BSD-3-Clause",
+          "license_copy": "third_party/licenses/unitree_ros_LICENSE",
+          "files": [
+            "robots/g1_description/g1_29dof.urdf",
+            "robots/g1_description/g1_29dof_with_hand.urdf"
+          ],
+          "purpose": "Official wrist-yaw, removable rubber-hand inertia, mount-frame, and hand-axis reference; not a replacement for the mandated MuJoCo model.",
+          "modified": false
+        },
+        "linkerhand_urdf": {
+          "repository": "https://github.com/linker-bot/linkerhand-urdf.git",
+          "branch": "main",
+          "commit": "735145e8843f44d85c1464725e6971ba97a6258e",
+          "commit_date": "2026-06-05T14:57:25+08:00",
+          "downloaded_on": "2026-07-16",
+          "license": "Apache-2.0",
+          "license_copy": "third_party/licenses/linkerhand-urdf_LICENSE",
+          "files": [
+            "o6/left/linkerhand_o6_left.urdf",
+            "o6/left/meshes/",
+            "o6/right/linkerhand_o6_right.urdf",
+            "o6/right/meshes/"
+          ],
+          "modified": false
+        },
+        "linkerhand_ros2_sdk": {
+          "repository": "https://github.com/linker-bot/linkerhand-ros2-sdk.git",
+          "branch": "main",
+          "commit": "5f4f36c660843f7fc26990348d49b402ed9fac48",
+          "commit_date": "2026-06-08T11:44:37+08:00",
+          "downloaded_on": "2026-07-16",
+          "license": "Apache-2.0",
+          "license_copy": "third_party/licenses/linkerhand-ros2-sdk_LICENSE",
+          "files": [
+            "README.md",
+            "linker_hand_ros2_sdk/"
+          ],
+          "modified": false
+        }
+      }
+    },
+    "vendor_worktrees_clean": {
+      "unitree_mujoco": true,
+      "unitree_ros": true,
+      "linkerhand_urdf": true,
+      "linkerhand_ros2_sdk": true
+    },
+    "g1_29dof_found": true,
+    "o6_left_urdf_found": true,
+    "o6_right_urdf_found": true,
+    "o6_left_meshes_complete": true,
+    "o6_right_meshes_complete": true
+  },
+  "g1": {
+    "source": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\third_party\\unitree_mujoco\\unitree_robots\\g1\\g1_29dof.xml",
+    "load_success": true,
+    "model_counts": {
+      "bodies_including_world": 31,
+      "physical_bodies": 30,
+      "joints_including_floating_base": 30,
+      "actuated_hinge_joints": 29,
+      "qpos": 36,
+      "dofs": 35,
+      "actuators": 29,
+      "sensors": 95,
+      "keyframes": 0
+    },
+    "total_mass_kg": 35.112142000000006,
+    "branch_counts": {
+      "left_leg": 6,
+      "right_leg": 6,
+      "left_arm": 7,
+      "right_arm": 7,
+      "waist": 3
+    },
+    "terminal_links": {
+      "left_wrist": "left_wrist_yaw_link",
+      "right_wrist": "right_wrist_yaw_link"
+    },
+    "initial_qpos": [
+      0.0,
+      0.0,
+      0.793,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "joints": [
+      {
+        "index": 0,
+        "name": "floating_base_joint",
+        "joint_type": "free",
+        "body": "pelvis",
+        "parent_body": "world",
+        "branch": "floating_base",
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "limited": false,
+        "range_rad": null,
+        "qpos0": [
+          0.0,
+          0.0,
+          0.793,
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "actuator": null
+      },
+      {
+        "index": 1,
+        "name": "left_hip_pitch_joint",
+        "joint_type": "hinge",
+        "body": "left_hip_pitch_link",
+        "parent_body": "pelvis",
+        "branch": "left_leg",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -2.5307,
+          2.8798
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "left_hip_pitch"
+      },
+      {
+        "index": 2,
+        "name": "left_hip_roll_joint",
+        "joint_type": "hinge",
+        "body": "left_hip_roll_link",
+        "parent_body": "left_hip_pitch_link",
+        "branch": "left_leg",
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -0.5236,
+          2.9671
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "left_hip_roll"
+      },
+      {
+        "index": 3,
+        "name": "left_hip_yaw_joint",
+        "joint_type": "hinge",
+        "body": "left_hip_yaw_link",
+        "parent_body": "left_hip_roll_link",
+        "branch": "left_leg",
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -2.7576,
+          2.7576
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "left_hip_yaw"
+      },
+      {
+        "index": 4,
+        "name": "left_knee_joint",
+        "joint_type": "hinge",
+        "body": "left_knee_link",
+        "parent_body": "left_hip_yaw_link",
+        "branch": "left_leg",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -0.087267,
+          2.8798
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "left_knee"
+      },
+      {
+        "index": 5,
+        "name": "left_ankle_pitch_joint",
+        "joint_type": "hinge",
+        "body": "left_ankle_pitch_link",
+        "parent_body": "left_knee_link",
+        "branch": "left_leg",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -0.87267,
+          0.5236
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "left_ankle_pitch"
+      },
+      {
+        "index": 6,
+        "name": "left_ankle_roll_joint",
+        "joint_type": "hinge",
+        "body": "left_ankle_roll_link",
+        "parent_body": "left_ankle_pitch_link",
+        "branch": "left_leg",
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -0.2618,
+          0.2618
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "left_ankle_roll"
+      },
+      {
+        "index": 7,
+        "name": "right_hip_pitch_joint",
+        "joint_type": "hinge",
+        "body": "right_hip_pitch_link",
+        "parent_body": "pelvis",
+        "branch": "right_leg",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -2.5307,
+          2.8798
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "right_hip_pitch"
+      },
+      {
+        "index": 8,
+        "name": "right_hip_roll_joint",
+        "joint_type": "hinge",
+        "body": "right_hip_roll_link",
+        "parent_body": "right_hip_pitch_link",
+        "branch": "right_leg",
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -2.9671,
+          0.5236
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "right_hip_roll"
+      },
+      {
+        "index": 9,
+        "name": "right_hip_yaw_joint",
+        "joint_type": "hinge",
+        "body": "right_hip_yaw_link",
+        "parent_body": "right_hip_roll_link",
+        "branch": "right_leg",
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -2.7576,
+          2.7576
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "right_hip_yaw"
+      },
+      {
+        "index": 10,
+        "name": "right_knee_joint",
+        "joint_type": "hinge",
+        "body": "right_knee_link",
+        "parent_body": "right_hip_yaw_link",
+        "branch": "right_leg",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -0.087267,
+          2.8798
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "right_knee"
+      },
+      {
+        "index": 11,
+        "name": "right_ankle_pitch_joint",
+        "joint_type": "hinge",
+        "body": "right_ankle_pitch_link",
+        "parent_body": "right_knee_link",
+        "branch": "right_leg",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -0.87267,
+          0.5236
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "right_ankle_pitch"
+      },
+      {
+        "index": 12,
+        "name": "right_ankle_roll_joint",
+        "joint_type": "hinge",
+        "body": "right_ankle_roll_link",
+        "parent_body": "right_ankle_pitch_link",
+        "branch": "right_leg",
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -0.2618,
+          0.2618
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "right_ankle_roll"
+      },
+      {
+        "index": 13,
+        "name": "waist_yaw_joint",
+        "joint_type": "hinge",
+        "body": "waist_yaw_link",
+        "parent_body": "pelvis",
+        "branch": "waist",
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -2.618,
+          2.618
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "waist_yaw"
+      },
+      {
+        "index": 14,
+        "name": "waist_roll_joint",
+        "joint_type": "hinge",
+        "body": "waist_roll_link",
+        "parent_body": "waist_yaw_link",
+        "branch": "waist",
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -0.52,
+          0.52
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "waist_roll"
+      },
+      {
+        "index": 15,
+        "name": "waist_pitch_joint",
+        "joint_type": "hinge",
+        "body": "torso_link",
+        "parent_body": "waist_roll_link",
+        "branch": "waist",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -0.52,
+          0.52
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "waist_pitch"
+      },
+      {
+        "index": 16,
+        "name": "left_shoulder_pitch_joint",
+        "joint_type": "hinge",
+        "body": "left_shoulder_pitch_link",
+        "parent_body": "torso_link",
+        "branch": "left_arm",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -3.0892,
+          2.6704
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "left_shoulder_pitch"
+      },
+      {
+        "index": 17,
+        "name": "left_shoulder_roll_joint",
+        "joint_type": "hinge",
+        "body": "left_shoulder_roll_link",
+        "parent_body": "left_shoulder_pitch_link",
+        "branch": "left_arm",
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -1.5882,
+          2.2515
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "left_shoulder_roll"
+      },
+      {
+        "index": 18,
+        "name": "left_shoulder_yaw_joint",
+        "joint_type": "hinge",
+        "body": "left_shoulder_yaw_link",
+        "parent_body": "left_shoulder_roll_link",
+        "branch": "left_arm",
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -2.618,
+          2.618
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "left_shoulder_yaw"
+      },
+      {
+        "index": 19,
+        "name": "left_elbow_joint",
+        "joint_type": "hinge",
+        "body": "left_elbow_link",
+        "parent_body": "left_shoulder_yaw_link",
+        "branch": "left_arm",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -1.0472,
+          2.0944
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "left_elbow"
+      },
+      {
+        "index": 20,
+        "name": "left_wrist_roll_joint",
+        "joint_type": "hinge",
+        "body": "left_wrist_roll_link",
+        "parent_body": "left_elbow_link",
+        "branch": "left_arm",
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -1.97222,
+          1.97222
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "left_wrist_roll"
+      },
+      {
+        "index": 21,
+        "name": "left_wrist_pitch_joint",
+        "joint_type": "hinge",
+        "body": "left_wrist_pitch_link",
+        "parent_body": "left_wrist_roll_link",
+        "branch": "left_arm",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -1.61443,
+          1.61443
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "left_wrist_pitch"
+      },
+      {
+        "index": 22,
+        "name": "left_wrist_yaw_joint",
+        "joint_type": "hinge",
+        "body": "left_wrist_yaw_link",
+        "parent_body": "left_wrist_pitch_link",
+        "branch": "left_arm",
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -1.61443,
+          1.61443
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "left_wrist_yaw"
+      },
+      {
+        "index": 23,
+        "name": "right_shoulder_pitch_joint",
+        "joint_type": "hinge",
+        "body": "right_shoulder_pitch_link",
+        "parent_body": "torso_link",
+        "branch": "right_arm",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -3.0892,
+          2.6704
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "right_shoulder_pitch"
+      },
+      {
+        "index": 24,
+        "name": "right_shoulder_roll_joint",
+        "joint_type": "hinge",
+        "body": "right_shoulder_roll_link",
+        "parent_body": "right_shoulder_pitch_link",
+        "branch": "right_arm",
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -2.2515,
+          1.5882
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "right_shoulder_roll"
+      },
+      {
+        "index": 25,
+        "name": "right_shoulder_yaw_joint",
+        "joint_type": "hinge",
+        "body": "right_shoulder_yaw_link",
+        "parent_body": "right_shoulder_roll_link",
+        "branch": "right_arm",
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -2.618,
+          2.618
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "right_shoulder_yaw"
+      },
+      {
+        "index": 26,
+        "name": "right_elbow_joint",
+        "joint_type": "hinge",
+        "body": "right_elbow_link",
+        "parent_body": "right_shoulder_yaw_link",
+        "branch": "right_arm",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -1.0472,
+          2.0944
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "right_elbow"
+      },
+      {
+        "index": 27,
+        "name": "right_wrist_roll_joint",
+        "joint_type": "hinge",
+        "body": "right_wrist_roll_link",
+        "parent_body": "right_elbow_link",
+        "branch": "right_arm",
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -1.97222,
+          1.97222
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "right_wrist_roll"
+      },
+      {
+        "index": 28,
+        "name": "right_wrist_pitch_joint",
+        "joint_type": "hinge",
+        "body": "right_wrist_pitch_link",
+        "parent_body": "right_wrist_roll_link",
+        "branch": "right_arm",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -1.61443,
+          1.61443
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "right_wrist_pitch"
+      },
+      {
+        "index": 29,
+        "name": "right_wrist_yaw_joint",
+        "joint_type": "hinge",
+        "body": "right_wrist_yaw_link",
+        "parent_body": "right_wrist_pitch_link",
+        "branch": "right_arm",
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "limited": true,
+        "range_rad": [
+          -1.61443,
+          1.61443
+        ],
+        "qpos0": [
+          0.0
+        ],
+        "actuator": "right_wrist_yaw"
+      }
+    ],
+    "validations": {
+      "29_actuated_joints": true,
+      "left_arm_7dof": true,
+      "right_arm_7dof": true,
+      "left_leg_6dof_chain": true,
+      "right_leg_6dof_chain": true,
+      "waist_3dof": true,
+      "all_arrays_finite": true,
+      "all_hinges_actuated": true
+    },
+    "pedal_capability_status": "Both six-joint leg chains are structurally complete; actual pedal reachability and contact capability remain unverified until Phase 5."
+  },
+  "o6_left": {
+    "source": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\third_party\\linkerhand-urdf\\o6\\left\\linkerhand_o6_left.urdf",
+    "robot_name": "linkerhand_o6_left",
+    "load_success": true,
+    "root_links": [
+      "lh_hand_base_link"
+    ],
+    "link_count": 12,
+    "joint_count": 11,
+    "independent_joint_count": 6,
+    "passive_mimic_joint_count": 5,
+    "independent_joint_names": [
+      "lh_thumb_cmc_yaw",
+      "lh_thumb_cmc_pitch",
+      "lh_index_mcp_pitch",
+      "lh_middle_mcp_pitch",
+      "lh_ring_mcp_pitch",
+      "lh_pinky_mcp_pitch"
+    ],
+    "passive_mimic_joint_names": [
+      "lh_thumb_ip",
+      "lh_index_dip",
+      "lh_middle_dip",
+      "lh_ring_dip",
+      "lh_pinky_dip"
+    ],
+    "joints": [
+      {
+        "name": "lh_thumb_cmc_yaw",
+        "joint_type": "revolute",
+        "parent": "lh_hand_base_link",
+        "child": "lh_thumb_metacarpals_base2",
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.3,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "lh_thumb_cmc_pitch",
+        "joint_type": "revolute",
+        "parent": "lh_thumb_metacarpals_base2",
+        "child": "lh_thumb_metacarpals",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 0.58,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "lh_thumb_ip",
+        "joint_type": "revolute",
+        "parent": "lh_thumb_metacarpals",
+        "child": "lh_thumb_distal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.08,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": "lh_thumb_cmc_pitch",
+        "mimic_multiplier": 2.29,
+        "mimic_offset_rad": 0.0,
+        "role": "passive_mimic"
+      },
+      {
+        "name": "lh_index_mcp_pitch",
+        "joint_type": "revolute",
+        "parent": "lh_hand_base_link",
+        "child": "lh_index_proximal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.6,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "lh_index_dip",
+        "joint_type": "revolute",
+        "parent": "lh_index_proximal",
+        "child": "lh_index_distal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.43,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": "lh_index_mcp_pitch",
+        "mimic_multiplier": 0.89,
+        "mimic_offset_rad": 0.0,
+        "role": "passive_mimic"
+      },
+      {
+        "name": "lh_middle_mcp_pitch",
+        "joint_type": "revolute",
+        "parent": "lh_hand_base_link",
+        "child": "lh_middle_proximal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.6,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "lh_middle_dip",
+        "joint_type": "revolute",
+        "parent": "lh_middle_proximal",
+        "child": "lh_middle_distal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.43,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": "lh_middle_mcp_pitch",
+        "mimic_multiplier": 0.89,
+        "mimic_offset_rad": 0.0,
+        "role": "passive_mimic"
+      },
+      {
+        "name": "lh_ring_mcp_pitch",
+        "joint_type": "revolute",
+        "parent": "lh_hand_base_link",
+        "child": "lh_ring_proximal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.6,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "lh_ring_dip",
+        "joint_type": "revolute",
+        "parent": "lh_ring_proximal",
+        "child": "lh_ring_distal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.43,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": "lh_ring_mcp_pitch",
+        "mimic_multiplier": 0.89,
+        "mimic_offset_rad": 0.0,
+        "role": "passive_mimic"
+      },
+      {
+        "name": "lh_pinky_mcp_pitch",
+        "joint_type": "revolute",
+        "parent": "lh_hand_base_link",
+        "child": "lh_pinky_proximal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.6,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "lh_pinky_dip",
+        "joint_type": "revolute",
+        "parent": "lh_pinky_proximal",
+        "child": "lh_pinky_distal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.43,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": "lh_pinky_mcp_pitch",
+        "mimic_multiplier": 0.89,
+        "mimic_offset_rad": 0.0,
+        "role": "passive_mimic"
+      }
+    ],
+    "meshes": [
+      "meshes/hand_base_link.STL",
+      "meshes/thumb_metacarpals_base2.STL",
+      "meshes/thumb_metacarpals.STL",
+      "meshes/thumb_distal.STL",
+      "meshes/index_proximal.STL",
+      "meshes/index_distal.STL",
+      "meshes/middle_proximal.STL",
+      "meshes/middle_distal.STL",
+      "meshes/ring_proximal.STL",
+      "meshes/ring_distal.STL",
+      "meshes/pinky_proximal.STL",
+      "meshes/pinky_distal.STL"
+    ],
+    "missing_meshes": [],
+    "urdf_total_mass_kg": 0.11385611280331472,
+    "all_link_inertias_positive_definite": true,
+    "raw_mujoco_compile": {
+      "bodies_including_world": 12,
+      "joints": 11,
+      "qpos": 11,
+      "dofs": 11,
+      "actuators": 0,
+      "sensors": 0,
+      "dynamic_mass_kg": 0.04656258898666621,
+      "arrays_finite": true
+    },
+    "root_mass_preserved_by_raw_compile": false,
+    "conversion_note": "The raw URDF compiles, but MuJoCo fuses the fixed root link into the world. The compiled dynamic mass therefore omits the root-link mass. Phase 2 must preserve the root as an attachable body and recreate all mimic constraints."
+  },
+  "o6_right": {
+    "source": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\third_party\\linkerhand-urdf\\o6\\right\\linkerhand_o6_right.urdf",
+    "robot_name": "linkerhand_o6_right",
+    "load_success": true,
+    "root_links": [
+      "rh_hand_base_link"
+    ],
+    "link_count": 12,
+    "joint_count": 11,
+    "independent_joint_count": 6,
+    "passive_mimic_joint_count": 5,
+    "independent_joint_names": [
+      "rh_thumb_cmc_yaw",
+      "rh_thumb_cmc_pitch",
+      "rh_index_mcp_pitch",
+      "rh_middle_mcp_pitch",
+      "rh_ring_mcp_pitch",
+      "rh_pinky_mcp_pitch"
+    ],
+    "passive_mimic_joint_names": [
+      "rh_thumb_ip",
+      "rh_index_dip",
+      "rh_middle_dip",
+      "rh_ring_dip",
+      "rh_pinky_dip"
+    ],
+    "joints": [
+      {
+        "name": "rh_thumb_cmc_yaw",
+        "joint_type": "revolute",
+        "parent": "rh_hand_base_link",
+        "child": "rh_thumb_metacarpals_base2",
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.36,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "rh_thumb_cmc_pitch",
+        "joint_type": "revolute",
+        "parent": "rh_thumb_metacarpals_base2",
+        "child": "rh_thumb_metacarpals",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 0.58,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "rh_thumb_ip",
+        "joint_type": "revolute",
+        "parent": "rh_thumb_metacarpals",
+        "child": "rh_thumb_distal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.08,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": "rh_thumb_cmc_pitch",
+        "mimic_multiplier": 1.86,
+        "mimic_offset_rad": 0.0,
+        "role": "passive_mimic"
+      },
+      {
+        "name": "rh_index_mcp_pitch",
+        "joint_type": "revolute",
+        "parent": "rh_hand_base_link",
+        "child": "rh_index_proximal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.6,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "rh_index_dip",
+        "joint_type": "revolute",
+        "parent": "rh_index_proximal",
+        "child": "rh_index_distal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.43,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": "rh_index_mcp_pitch",
+        "mimic_multiplier": 0.89,
+        "mimic_offset_rad": 0.0,
+        "role": "passive_mimic"
+      },
+      {
+        "name": "rh_middle_mcp_pitch",
+        "joint_type": "revolute",
+        "parent": "rh_hand_base_link",
+        "child": "rh_middle_proximal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.6,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "rh_middle_dip",
+        "joint_type": "revolute",
+        "parent": "rh_middle_proximal",
+        "child": "rh_middle_distal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.43,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": "rh_middle_mcp_pitch",
+        "mimic_multiplier": 0.89,
+        "mimic_offset_rad": 0.0,
+        "role": "passive_mimic"
+      },
+      {
+        "name": "rh_ring_mcp_pitch",
+        "joint_type": "revolute",
+        "parent": "rh_hand_base_link",
+        "child": "rh_ring_proximal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.6,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "rh_ring_dip",
+        "joint_type": "revolute",
+        "parent": "rh_ring_proximal",
+        "child": "rh_ring_distal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.43,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": "rh_ring_mcp_pitch",
+        "mimic_multiplier": 0.89,
+        "mimic_offset_rad": 0.0,
+        "role": "passive_mimic"
+      },
+      {
+        "name": "rh_pinky_mcp_pitch",
+        "joint_type": "revolute",
+        "parent": "rh_hand_base_link",
+        "child": "rh_pinky_proximal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.6,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": null,
+        "mimic_multiplier": null,
+        "mimic_offset_rad": null,
+        "role": "independent_input"
+      },
+      {
+        "name": "rh_pinky_dip",
+        "joint_type": "revolute",
+        "parent": "rh_pinky_proximal",
+        "child": "rh_pinky_distal",
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "limit_lower_rad": 0.0,
+        "limit_upper_rad": 1.43,
+        "effort": 100.0,
+        "velocity": 1.0,
+        "mimic_joint": "rh_pinky_mcp_pitch",
+        "mimic_multiplier": 0.89,
+        "mimic_offset_rad": 0.0,
+        "role": "passive_mimic"
+      }
+    ],
+    "meshes": [
+      "meshes/hand_base_link.STL",
+      "meshes/thumb_metacarpals_base2.STL",
+      "meshes/thumb_metacarpals.STL",
+      "meshes/thumb_distal.STL",
+      "meshes/index_proximal.STL",
+      "meshes/index_distal.STL",
+      "meshes/middle_proximal.STL",
+      "meshes/middle_distal.STL",
+      "meshes/ring_proximal.STL",
+      "meshes/ring_distal.STL",
+      "meshes/pinky_proximal.STL",
+      "meshes/pinky_distal.STL"
+    ],
+    "missing_meshes": [],
+    "urdf_total_mass_kg": 0.113956201154497,
+    "all_link_inertias_positive_definite": true,
+    "raw_mujoco_compile": {
+      "bodies_including_world": 12,
+      "joints": 11,
+      "qpos": 11,
+      "dofs": 11,
+      "actuators": 0,
+      "sensors": 0,
+      "dynamic_mass_kg": 0.046555421544547004,
+      "arrays_finite": true
+    },
+    "root_mass_preserved_by_raw_compile": false,
+    "conversion_note": "The raw URDF compiles, but MuJoCo fuses the fixed root link into the world. The compiled dynamic mass therefore omits the root-link mass. Phase 2 must preserve the root as an attachable body and recreate all mimic constraints."
+  },
+  "environment": {
+    "required_python": "3.11",
+    "audited_python": "3.12.5",
+    "python_version_matches_target": false,
+    "mujoco": "3.10.0"
+  },
+  "proposed_or_created_files": [
+    "third_party/source_manifest.yaml",
+    "third_party/licenses/*",
+    "src/aeropilot_humanoid/vendor_audit.py",
+    "apps/inspect_vendor_models.py",
+    "docs/source_audit.md",
+    "docs/g1_joint_map.md",
+    "docs/o6_joint_map.md",
+    "docs/assumptions_and_risks.md",
+    "reports/phase0_audit.json",
+    "reports/g1_joint_map.json",
+    "reports/o6_joint_map.json",
+    "reports/vendor_load_report.json",
+    "reports/screenshots/*.png",
+    "tests/test_vendor_models.py"
+  ],
+  "unresolved_parameters": [
+    "Left and right G1-to-O6 wrist adapter transforms.",
+    "Whether the G1 wrist visual/physical geometry must be disabled when O6 is attached.",
+    "Cockpit seat, stick, throttle, pedal, and heel-rest dimensions.",
+    "Contact stiffness, damping, friction, solver, and actuator gains.",
+    "A collision-safe seated pose and multi-start reachability solution."
+  ],
+  "risks": [
+    "Raw O6 URDF compilation loses root-link dynamics by fusing the fixed root into world.",
+    "MuJoCo does not preserve URDF mimic tags as constraints or actuators.",
+    "Left/right O6 thumb coupling multipliers differ and cannot be mirrored.",
+    "The current Python 3.12.5 environment differs from the target Python 3.11.",
+    "The Unitree repository has unrelated case-colliding Go2W terrain filenames on Windows.",
+    "A complete leg chain does not prove pedal reachability or safe contact.",
+    "High-resolution hand collision meshes may be too expensive for training."
+  ],
+  "implementation_plan": [
+    "Phase 1: independently load and render G1, O6 left, and O6 right.",
+    "Phase 2: convert each O6 URDF to root-preserving MJCF and recreate mimic constraints.",
+    "Phase 3: calculate independent left/right wrist adapters and validate orientation/inertia.",
+    "Phase 4: model seat, stick, throttle, coupled rudder, differential brakes, and cameras.",
+    "Phase 5: solve collision-aware seated reachability with multiple starts.",
+    "Phase 6-9: controllers, physical-contact demo, train model, and validation reports."
+  ]
+}

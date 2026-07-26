@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="pedal_test">
+  <include file="../derived/cockpit/rudder_pedals.xml"/>
+</mujoco>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="bionic_pilot_hand_follow_scene">
+  <include file="../derived/pilot/g1_o6_hand_follow_controls.xml"/>
+</mujoco>

@@ -1,0 +1,53 @@
+{
+  "phase": 4,
+  "status": "passed_pre_reachability_layout",
+  "load_success": true,
+  "scene_load_success": true,
+  "pedal_scene_load_success": true,
+  "component_loads": {
+    "seat.xml": true,
+    "control_stick.xml": true,
+    "throttle.xml": true,
+    "rudder_pedals.xml": true
+  },
+  "counts": {
+    "joints": 7,
+    "dofs": 7,
+    "actuators": 0,
+    "sensors": 17,
+    "equalities": 1
+  },
+  "test_duration_s": 5.001999999999671,
+  "initial_qpos": {
+    "stick_roll_joint": 0.21,
+    "stick_pitch_joint": -0.21,
+    "throttle_joint": 0.096,
+    "left_rudder_joint": 0.03,
+    "right_rudder_joint": -0.03,
+    "left_brake_joint": 0.27999999999999997,
+    "right_brake_joint": 0.27999999999999997
+  },
+  "final_qpos": {
+    "stick_roll_joint": -1.8011826321019795e-05,
+    "stick_pitch_joint": 1.741413161991575e-05,
+    "throttle_joint": 0.096,
+    "left_rudder_joint": 0.0010636834234253438,
+    "right_rudder_joint": -0.001063683421685135,
+    "left_brake_joint": 0.007430146351389333,
+    "right_brake_joint": -0.0016160772904864058
+  },
+  "behavior": {
+    "stick_returns_to_center": true,
+    "throttle_holds_position": true,
+    "rudder_returns_to_center": true,
+    "rudder_remains_opposed": true,
+    "brakes_release": true,
+    "finite_state": true
+  },
+  "layout_status": "Phase 4 adjustable test-rig seed; Phase 5 must optimize within the listed ranges.",
+  "parameter_status": "Passive mechanism seed values; identify from the competition cockpit hardware before final validation.",
+  "output": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\models\\derived\\cockpit\\cockpit_frame.xml",
+  "scene": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\models\\scenes\\cockpit_mechanisms.xml",
+  "passed": true,
+  "screenshot": "reports\\screenshots\\cockpit_mechanisms.png"
+}

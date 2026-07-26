@@ -1,0 +1,145 @@
+{
+  "left": {
+    "load_success": true,
+    "bodies_including_world": 13,
+    "joints": 11,
+    "qpos": 11,
+    "dofs": 11,
+    "actuators": 0,
+    "equalities": 5,
+    "total_mass_kg": 0.11385611280331472,
+    "source_urdf_mass_kg": 0.11385611280331472,
+    "mass_preserved": true,
+    "mass_absolute_error_kg": 0.0,
+    "root_body_present": true,
+    "all_mesh_paths_relative": true,
+    "kinematic_motion_test": {
+      "command_fraction_of_safe_range": 0.25,
+      "commanded_independent_joints_rad": {
+        "lh_thumb_cmc_yaw": 0.325,
+        "lh_thumb_cmc_pitch": 0.11790393013100438,
+        "lh_index_mcp_pitch": 0.4,
+        "lh_middle_mcp_pitch": 0.4,
+        "lh_ring_mcp_pitch": 0.4,
+        "lh_pinky_mcp_pitch": 0.4
+      },
+      "max_body_displacement_m": 0.017295599020018735,
+      "max_mimic_residual_rad": 0.0,
+      "passed": true
+    },
+    "standalone_scene_load_success": true,
+    "source": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\third_party\\linkerhand-urdf\\o6\\left\\linkerhand_o6_left.urdf",
+    "output": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\models\\derived\\hands\\o6_left.xml",
+    "scene": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\models\\scenes\\o6_left_test.xml",
+    "passive_constraints": [
+      {
+        "joint": "lh_thumb_ip",
+        "source_joint": "lh_thumb_cmc_pitch",
+        "multiplier": 2.29,
+        "offset_rad": 0.0
+      },
+      {
+        "joint": "lh_index_dip",
+        "source_joint": "lh_index_mcp_pitch",
+        "multiplier": 0.89,
+        "offset_rad": 0.0
+      },
+      {
+        "joint": "lh_middle_dip",
+        "source_joint": "lh_middle_mcp_pitch",
+        "multiplier": 0.89,
+        "offset_rad": 0.0
+      },
+      {
+        "joint": "lh_ring_dip",
+        "source_joint": "lh_ring_mcp_pitch",
+        "multiplier": 0.89,
+        "offset_rad": 0.0
+      },
+      {
+        "joint": "lh_pinky_dip",
+        "source_joint": "lh_pinky_mcp_pitch",
+        "multiplier": 0.89,
+        "offset_rad": 0.0
+      }
+    ],
+    "passed": true,
+    "screenshots": [
+      "reports\\screenshots\\o6_left_derived_open.png",
+      "reports\\screenshots\\o6_left_derived_flexed.png"
+    ]
+  },
+  "right": {
+    "load_success": true,
+    "bodies_including_world": 13,
+    "joints": 11,
+    "qpos": 11,
+    "dofs": 11,
+    "actuators": 0,
+    "equalities": 5,
+    "total_mass_kg": 0.11395620115449699,
+    "source_urdf_mass_kg": 0.113956201154497,
+    "mass_preserved": true,
+    "mass_absolute_error_kg": 1.3877787807814457e-17,
+    "root_body_present": true,
+    "all_mesh_paths_relative": true,
+    "kinematic_motion_test": {
+      "command_fraction_of_safe_range": 0.25,
+      "commanded_independent_joints_rad": {
+        "rh_thumb_cmc_yaw": 0.34,
+        "rh_thumb_cmc_pitch": 0.145,
+        "rh_index_mcp_pitch": 0.4,
+        "rh_middle_mcp_pitch": 0.4,
+        "rh_ring_mcp_pitch": 0.4,
+        "rh_pinky_mcp_pitch": 0.4
+      },
+      "max_body_displacement_m": 0.018297051376022205,
+      "max_mimic_residual_rad": 0.0,
+      "passed": true
+    },
+    "standalone_scene_load_success": true,
+    "source": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\third_party\\linkerhand-urdf\\o6\\right\\linkerhand_o6_right.urdf",
+    "output": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\models\\derived\\hands\\o6_right.xml",
+    "scene": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\models\\scenes\\o6_right_test.xml",
+    "passive_constraints": [
+      {
+        "joint": "rh_thumb_ip",
+        "source_joint": "rh_thumb_cmc_pitch",
+        "multiplier": 1.86,
+        "offset_rad": 0.0
+      },
+      {
+        "joint": "rh_index_dip",
+        "source_joint": "rh_index_mcp_pitch",
+        "multiplier": 0.89,
+        "offset_rad": 0.0
+      },
+      {
+        "joint": "rh_middle_dip",
+        "source_joint": "rh_middle_mcp_pitch",
+        "multiplier": 0.89,
+        "offset_rad": 0.0
+      },
+      {
+        "joint": "rh_ring_dip",
+        "source_joint": "rh_ring_mcp_pitch",
+        "multiplier": 0.89,
+        "offset_rad": 0.0
+      },
+      {
+        "joint": "rh_pinky_dip",
+        "source_joint": "rh_pinky_mcp_pitch",
+        "multiplier": 0.89,
+        "offset_rad": 0.0
+      }
+    ],
+    "passed": true,
+    "screenshots": [
+      "reports\\screenshots\\o6_right_derived_open.png",
+      "reports\\screenshots\\o6_right_derived_flexed.png"
+    ]
+  },
+  "phase": 2,
+  "status": "passed",
+  "control_scope": "No actuators are added during conversion. Six calibrated position inputs per hand remain Phase 6 work; five official mimic joints are constrained."
+}

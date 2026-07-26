@@ -1,0 +1,27 @@
+source:
+  g1_mujoco: "third_party/unitree_mujoco/unitree_robots/g1/g1_29dof.xml"
+  g1_inertial_and_mount_reference: "third_party/unitree_ros/robots/g1_description/g1_29dof_with_hand.urdf"
+  axis_reference: "Unitree left/right hand finger-root positions in g1_29dof_with_hand.urdf and O6 finger-root positions in the official URDFs"
+  method: "Map O6 +Z (distal) to G1 +X; map lateral axes by matching official index/middle locations; apply the right-hand rule."
+removed_g1_rubber_hand_mass_kg_each: 0.170
+left:
+  adapter_body: "left_wrist_adapter"
+  parent_body: "left_wrist_yaw_link"
+  child_body: "lh_hand_base_link"
+  position_m: [0.0415, 0.003, 0.0]
+  quaternion_wxyz: [0.5, -0.5, 0.5, -0.5]
+  axis_mapping:
+    o6_x_in_g1_wrist: [0.0, -1.0, 0.0]
+    o6_y_in_g1_wrist: [0.0, 0.0, -1.0]
+    o6_z_in_g1_wrist: [1.0, 0.0, 0.0]
+right:
+  adapter_body: "right_wrist_adapter"
+  parent_body: "right_wrist_yaw_link"
+  child_body: "rh_hand_base_link"
+  position_m: [0.0415, -0.003, 0.0]
+  quaternion_wxyz: [0.5, 0.5, 0.5, 0.5]
+  axis_mapping:
+    o6_x_in_g1_wrist: [0.0, 1.0, 0.0]
+    o6_y_in_g1_wrist: [0.0, 0.0, 1.0]
+    o6_z_in_g1_wrist: [1.0, 0.0, 0.0]
+

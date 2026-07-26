@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="cockpit_mechanism_test">
+  <include file="../derived/cockpit/cockpit_frame.xml"/>
+</mujoco>

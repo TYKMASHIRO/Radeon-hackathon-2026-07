@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="control_stick">
+  <compiler angle="radian" />
+  <option timestep="0.002" gravity="0.0 0.0 -9.81" />
+  <default>
+    <geom friction="0.8 0.01 0.0001" />
+  </default>
+  <worldbody>
+    <light name="control_stick_light" pos="-0.5 -0.5 2" />
+    <body name="control_stick_base" pos="0.3 -0.28 0.6">
+      <geom name="stick_base_geom" type="cylinder" size="0.06 0.035" contype="0" conaffinity="0" rgba="0.25 0.28 0.30 1" />
+      <body name="stick_roll_frame">
+        <joint name="stick_roll_joint" type="hinge" axis="1 0 0" range="-0.3 0.3" stiffness="5.0" damping="0.15" frictionloss="0.05" />
+        <geom name="stick_roll_hub" type="sphere" size="0.025" mass="0.05" contype="0" conaffinity="0" rgba="0.3 0.32 0.34 1" />
+        <body name="stick_pitch_frame">
+          <joint name="stick_pitch_joint" type="hinge" axis="0 1 0" range="-0.3 0.3" stiffness="5.0" damping="0.15" frictionloss="0.05" />
+          <geom name="stick_handle" type="capsule" fromto="0 0 0 0 0 0.2" size="0.025" mass="0.25" friction="0.7 0.01 0.0001" rgba="0.08 0.09 0.10 1" />
+          <site name="stick_force_site" pos="0 0 0.2" size="0.01" />
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <sensor>
+    <jointpos name="stick_roll_position" joint="stick_roll_joint" />
+    <jointvel name="stick_roll_velocity" joint="stick_roll_joint" />
+    <jointpos name="stick_pitch_position" joint="stick_pitch_joint" />
+    <jointvel name="stick_pitch_velocity" joint="stick_pitch_joint" />
+    <force name="stick_force" site="stick_force_site" />
+    <torque name="stick_torque" site="stick_force_site" />
+  </sensor>
+</mujoco>

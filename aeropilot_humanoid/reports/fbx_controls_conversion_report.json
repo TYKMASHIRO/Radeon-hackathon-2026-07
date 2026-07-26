@@ -1,0 +1,131 @@
+{
+  "source_fbx": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\3d66.com_JDH5455235936.fbx",
+  "source_size_bytes": 3364704,
+  "output_obj": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\models\\derived\\cockpit\\imported_3d66\\meshes\\3d66_JDH5455235936_controls.obj",
+  "output_xml": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\models\\derived\\cockpit\\imported_3d66\\fbx_controls.xml",
+  "mesh_object_count_imported": 29,
+  "joined_mesh_name": "imported_3d66_controls_mesh",
+  "object_groups": {
+    "controls_static": [
+      "ba969fec-b14f-4ab0-8e29-58c7d6029e06",
+      "ccadccbf-655b-4569-bc52-7b6b134b4258",
+      "c35dbc39-1a88-4b86-8fc0-15b9b1e59af1",
+      "081e8f3b-273f-4e67-a821-1f1085e3bd2c"
+    ],
+    "throttle_moving": [
+      "558e4c00-052c-46ba-8a8f-bef9c0e9f9ff",
+      "8a62e694-0266-45fb-84a7-bd01e56dcc8b",
+      "566541ab-d2df-4fcf-99a7-1cd2dc8ee080",
+      "fcaa72ed-d745-4782-8eb1-80c46312cebe",
+      "9af5f06d-9204-4858-8c73-2b33f89644e0",
+      "77b780be-4840-42a0-95b9-a93a56187ddf",
+      "023541f5-63b1-4f5b-a9c1-0dbf5bb9a1b0",
+      "8064ae92-2322-4267-9a0e-400b9a4d44cf",
+      "5d5fac45-4882-4110-bc20-6bd1ca3fa644",
+      "53d70e18-8663-4a9e-ac6f-db5c74c63827",
+      "3f2909d9-b9db-42ec-b321-467af943e385"
+    ],
+    "stick_static": [
+      "f1fa1250-4135-4509-b73f-e0acf01fde3d",
+      "c77decc5-10ab-4f86-8f52-bfabed70e115",
+      "762a4365-645a-4ca7-a2a4-5e41607a4d5e",
+      "05435c31-2e55-4ac2-b86d-313c1fc7d3b3",
+      "b432f757-05e3-43de-9353-5437216b728f",
+      "54543b05-e23b-4c38-ae84-af0ad33655a0"
+    ],
+    "stick_moving": [
+      "f7da9514-a171-4af6-a635-4f8833807b5c",
+      "4364e0bf-f25b-42ad-9f1b-fa5685393f22",
+      "7c7bcef9-f7c7-421a-8f59-144f43d9c6aa",
+      "4d40bc60-80c8-4c5e-b80c-61d40ae5973f",
+      "5a275025-7835-4b22-baad-183707542f90",
+      "44c19d2f-c7fb-4bf2-9d09-e18245d42dbb",
+      "fe7a6c92-04f2-4726-93bc-facda9d1a41f",
+      "0ad28aa7-9d3a-414b-bf46-a16146f0fc89"
+    ]
+  },
+  "source_bounding_box_min": [
+    -2.531426429748535,
+    2.736631393432617,
+    -1.8188631534576416
+  ],
+  "source_bounding_box_max": [
+    0.02982008457183838,
+    3.814641237258911,
+    -0.39783036708831787
+  ],
+  "source_dimensions": [
+    2.5612465143203735,
+    1.078009843826294,
+    1.4210327863693237
+  ],
+  "normalization": {
+    "target_max_dimension_m": 0.45,
+    "scale_applied": 0.17569570030997483,
+    "bounding_box_min_m": [
+      -0.225,
+      -0.09470084722605365,
+      0.0
+    ],
+    "bounding_box_max_m": [
+      0.225,
+      0.09470084722605365,
+      0.2496693505645932
+    ],
+    "dimensions_m": [
+      0.45,
+      0.1894016944521073,
+      0.2496693505645932
+    ],
+    "world_offset_m": [
+      0.24,
+      0.0,
+      0.62
+    ],
+    "throttle_pivot_m": [
+      -0.12,
+      0.3,
+      0.0
+    ],
+    "stick_pivot_m": [
+      0.06,
+      0.0,
+      0.08
+    ]
+  },
+  "alignment": {
+    "obj_axis_transform": "(x, y, z) -> (y, -x, z)",
+    "throttle_source_pivot_m": [
+      0.00841272622346878,
+      0.0514666922390461,
+      0.06662600487470627
+    ],
+    "throttle_target_pivot_m": [
+      -0.11999999731779099,
+      0.30000001192092896,
+      0.0
+    ],
+    "throttle_site_local_m": [
+      0.02,
+      0.0,
+      0.07
+    ],
+    "stick_source_pivot_m": [
+      -0.014462117105722427,
+      -0.16682244837284088,
+      0.08382720500230789
+    ],
+    "stick_target_pivot_m": [
+      0.05999999865889549,
+      0.0,
+      0.07999999821186066
+    ],
+    "stick_site_local_m": [
+      0.03876000642776489,
+      0.006741136312484741,
+      0.15479055047035217
+    ],
+    "stick_static_is_world_fixed": true
+  },
+  "mjcf_status": "The XML imports split FBX-derived OBJ meshes as articulated MuJoCo bodies. throttle_joint, stick_roll_joint, and stick_pitch_joint are the control joints driven by the humanoid pilot sequence."
+}

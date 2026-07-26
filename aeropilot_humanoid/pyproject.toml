@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aeropilot-humanoid"
+version = "0.1.0"
+description = "Audited MuJoCo assets for the Physical AI bionic pilot"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "mujoco>=3.3.0,<4",
+  "numpy>=2.0.0,<3",
+  "Pillow>=10.0",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "--strict-markers"
+

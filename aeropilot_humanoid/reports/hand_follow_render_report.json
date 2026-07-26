@@ -1,0 +1,41 @@
+{
+  "status": "passed_mujoco_render",
+  "scene": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\models\\scenes\\hand_follow_controls.xml",
+  "fbx_source_model": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\models\\derived\\cockpit\\imported_3d66\\fbx_controls.xml",
+  "output_dir": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\reports\\screenshots\\hand_follow_controls",
+  "gif": "reports\\screenshots\\hand_follow_controls\\hand_follow_controls.gif",
+  "snapshots": [
+    "reports\\screenshots\\hand_follow_controls\\00_ready.png",
+    "reports\\screenshots\\hand_follow_controls\\01_throttle_forward.png",
+    "reports\\screenshots\\hand_follow_controls\\02_stick_deflected.png",
+    "reports\\screenshots\\hand_follow_controls\\03_fbx_controls_overview.png"
+  ],
+  "simulation_steps": 1501,
+  "rendered_frames": 60,
+  "processed_png": 4,
+  "gif_outputs": 1,
+  "width_px": 640,
+  "height_px": 480,
+  "internal_elapsed_ms": 3797.8876000270247,
+  "avg_ms_per_rendered_frame": 63.29812666711708,
+  "render_fps": 15.798255851377238,
+  "final_targets": {
+    "stick_roll_joint": -0.11481868145933263,
+    "stick_pitch_joint": -0.2386394375797544,
+    "throttle_joint": 0.1326651074574585
+  },
+  "final_controls": {
+    "stick_roll_joint": -0.11031954329312928,
+    "stick_pitch_joint": -0.228796089831405,
+    "throttle_joint": 0.13103264817084725
+  },
+  "final_abs_error": {
+    "stick_roll_joint": 0.004499138166203356,
+    "stick_pitch_joint": 0.009843347748349385,
+    "throttle_joint": 0.0016324592866112375
+  },
+  "valid": 60,
+  "skipped": 0,
+  "failed": 0,
+  "warnings": 0
+}

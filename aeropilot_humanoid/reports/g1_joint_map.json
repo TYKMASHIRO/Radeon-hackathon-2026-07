@@ -1,0 +1,741 @@
+{
+  "source": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\third_party\\unitree_mujoco\\unitree_robots\\g1\\g1_29dof.xml",
+  "load_success": true,
+  "model_counts": {
+    "bodies_including_world": 31,
+    "physical_bodies": 30,
+    "joints_including_floating_base": 30,
+    "actuated_hinge_joints": 29,
+    "qpos": 36,
+    "dofs": 35,
+    "actuators": 29,
+    "sensors": 95,
+    "keyframes": 0
+  },
+  "total_mass_kg": 35.112142000000006,
+  "branch_counts": {
+    "left_leg": 6,
+    "right_leg": 6,
+    "left_arm": 7,
+    "right_arm": 7,
+    "waist": 3
+  },
+  "terminal_links": {
+    "left_wrist": "left_wrist_yaw_link",
+    "right_wrist": "right_wrist_yaw_link"
+  },
+  "initial_qpos": [
+    0.0,
+    0.0,
+    0.793,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "joints": [
+    {
+      "index": 0,
+      "name": "floating_base_joint",
+      "joint_type": "free",
+      "body": "pelvis",
+      "parent_body": "world",
+      "branch": "floating_base",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limited": false,
+      "range_rad": null,
+      "qpos0": [
+        0.0,
+        0.0,
+        0.793,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "actuator": null
+    },
+    {
+      "index": 1,
+      "name": "left_hip_pitch_joint",
+      "joint_type": "hinge",
+      "body": "left_hip_pitch_link",
+      "parent_body": "pelvis",
+      "branch": "left_leg",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -2.5307,
+        2.8798
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "left_hip_pitch"
+    },
+    {
+      "index": 2,
+      "name": "left_hip_roll_joint",
+      "joint_type": "hinge",
+      "body": "left_hip_roll_link",
+      "parent_body": "left_hip_pitch_link",
+      "branch": "left_leg",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -0.5236,
+        2.9671
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "left_hip_roll"
+    },
+    {
+      "index": 3,
+      "name": "left_hip_yaw_joint",
+      "joint_type": "hinge",
+      "body": "left_hip_yaw_link",
+      "parent_body": "left_hip_roll_link",
+      "branch": "left_leg",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -2.7576,
+        2.7576
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "left_hip_yaw"
+    },
+    {
+      "index": 4,
+      "name": "left_knee_joint",
+      "joint_type": "hinge",
+      "body": "left_knee_link",
+      "parent_body": "left_hip_yaw_link",
+      "branch": "left_leg",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -0.087267,
+        2.8798
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "left_knee"
+    },
+    {
+      "index": 5,
+      "name": "left_ankle_pitch_joint",
+      "joint_type": "hinge",
+      "body": "left_ankle_pitch_link",
+      "parent_body": "left_knee_link",
+      "branch": "left_leg",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -0.87267,
+        0.5236
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "left_ankle_pitch"
+    },
+    {
+      "index": 6,
+      "name": "left_ankle_roll_joint",
+      "joint_type": "hinge",
+      "body": "left_ankle_roll_link",
+      "parent_body": "left_ankle_pitch_link",
+      "branch": "left_leg",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -0.2618,
+        0.2618
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "left_ankle_roll"
+    },
+    {
+      "index": 7,
+      "name": "right_hip_pitch_joint",
+      "joint_type": "hinge",
+      "body": "right_hip_pitch_link",
+      "parent_body": "pelvis",
+      "branch": "right_leg",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -2.5307,
+        2.8798
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "right_hip_pitch"
+    },
+    {
+      "index": 8,
+      "name": "right_hip_roll_joint",
+      "joint_type": "hinge",
+      "body": "right_hip_roll_link",
+      "parent_body": "right_hip_pitch_link",
+      "branch": "right_leg",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -2.9671,
+        0.5236
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "right_hip_roll"
+    },
+    {
+      "index": 9,
+      "name": "right_hip_yaw_joint",
+      "joint_type": "hinge",
+      "body": "right_hip_yaw_link",
+      "parent_body": "right_hip_roll_link",
+      "branch": "right_leg",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -2.7576,
+        2.7576
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "right_hip_yaw"
+    },
+    {
+      "index": 10,
+      "name": "right_knee_joint",
+      "joint_type": "hinge",
+      "body": "right_knee_link",
+      "parent_body": "right_hip_yaw_link",
+      "branch": "right_leg",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -0.087267,
+        2.8798
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "right_knee"
+    },
+    {
+      "index": 11,
+      "name": "right_ankle_pitch_joint",
+      "joint_type": "hinge",
+      "body": "right_ankle_pitch_link",
+      "parent_body": "right_knee_link",
+      "branch": "right_leg",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -0.87267,
+        0.5236
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "right_ankle_pitch"
+    },
+    {
+      "index": 12,
+      "name": "right_ankle_roll_joint",
+      "joint_type": "hinge",
+      "body": "right_ankle_roll_link",
+      "parent_body": "right_ankle_pitch_link",
+      "branch": "right_leg",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -0.2618,
+        0.2618
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "right_ankle_roll"
+    },
+    {
+      "index": 13,
+      "name": "waist_yaw_joint",
+      "joint_type": "hinge",
+      "body": "waist_yaw_link",
+      "parent_body": "pelvis",
+      "branch": "waist",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -2.618,
+        2.618
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "waist_yaw"
+    },
+    {
+      "index": 14,
+      "name": "waist_roll_joint",
+      "joint_type": "hinge",
+      "body": "waist_roll_link",
+      "parent_body": "waist_yaw_link",
+      "branch": "waist",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -0.52,
+        0.52
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "waist_roll"
+    },
+    {
+      "index": 15,
+      "name": "waist_pitch_joint",
+      "joint_type": "hinge",
+      "body": "torso_link",
+      "parent_body": "waist_roll_link",
+      "branch": "waist",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -0.52,
+        0.52
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "waist_pitch"
+    },
+    {
+      "index": 16,
+      "name": "left_shoulder_pitch_joint",
+      "joint_type": "hinge",
+      "body": "left_shoulder_pitch_link",
+      "parent_body": "torso_link",
+      "branch": "left_arm",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -3.0892,
+        2.6704
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "left_shoulder_pitch"
+    },
+    {
+      "index": 17,
+      "name": "left_shoulder_roll_joint",
+      "joint_type": "hinge",
+      "body": "left_shoulder_roll_link",
+      "parent_body": "left_shoulder_pitch_link",
+      "branch": "left_arm",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -1.5882,
+        2.2515
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "left_shoulder_roll"
+    },
+    {
+      "index": 18,
+      "name": "left_shoulder_yaw_joint",
+      "joint_type": "hinge",
+      "body": "left_shoulder_yaw_link",
+      "parent_body": "left_shoulder_roll_link",
+      "branch": "left_arm",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -2.618,
+        2.618
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "left_shoulder_yaw"
+    },
+    {
+      "index": 19,
+      "name": "left_elbow_joint",
+      "joint_type": "hinge",
+      "body": "left_elbow_link",
+      "parent_body": "left_shoulder_yaw_link",
+      "branch": "left_arm",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -1.0472,
+        2.0944
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "left_elbow"
+    },
+    {
+      "index": 20,
+      "name": "left_wrist_roll_joint",
+      "joint_type": "hinge",
+      "body": "left_wrist_roll_link",
+      "parent_body": "left_elbow_link",
+      "branch": "left_arm",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -1.97222,
+        1.97222
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "left_wrist_roll"
+    },
+    {
+      "index": 21,
+      "name": "left_wrist_pitch_joint",
+      "joint_type": "hinge",
+      "body": "left_wrist_pitch_link",
+      "parent_body": "left_wrist_roll_link",
+      "branch": "left_arm",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -1.61443,
+        1.61443
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "left_wrist_pitch"
+    },
+    {
+      "index": 22,
+      "name": "left_wrist_yaw_joint",
+      "joint_type": "hinge",
+      "body": "left_wrist_yaw_link",
+      "parent_body": "left_wrist_pitch_link",
+      "branch": "left_arm",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -1.61443,
+        1.61443
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "left_wrist_yaw"
+    },
+    {
+      "index": 23,
+      "name": "right_shoulder_pitch_joint",
+      "joint_type": "hinge",
+      "body": "right_shoulder_pitch_link",
+      "parent_body": "torso_link",
+      "branch": "right_arm",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -3.0892,
+        2.6704
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "right_shoulder_pitch"
+    },
+    {
+      "index": 24,
+      "name": "right_shoulder_roll_joint",
+      "joint_type": "hinge",
+      "body": "right_shoulder_roll_link",
+      "parent_body": "right_shoulder_pitch_link",
+      "branch": "right_arm",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -2.2515,
+        1.5882
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "right_shoulder_roll"
+    },
+    {
+      "index": 25,
+      "name": "right_shoulder_yaw_joint",
+      "joint_type": "hinge",
+      "body": "right_shoulder_yaw_link",
+      "parent_body": "right_shoulder_roll_link",
+      "branch": "right_arm",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -2.618,
+        2.618
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "right_shoulder_yaw"
+    },
+    {
+      "index": 26,
+      "name": "right_elbow_joint",
+      "joint_type": "hinge",
+      "body": "right_elbow_link",
+      "parent_body": "right_shoulder_yaw_link",
+      "branch": "right_arm",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -1.0472,
+        2.0944
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "right_elbow"
+    },
+    {
+      "index": 27,
+      "name": "right_wrist_roll_joint",
+      "joint_type": "hinge",
+      "body": "right_wrist_roll_link",
+      "parent_body": "right_elbow_link",
+      "branch": "right_arm",
+      "axis": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -1.97222,
+        1.97222
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "right_wrist_roll"
+    },
+    {
+      "index": 28,
+      "name": "right_wrist_pitch_joint",
+      "joint_type": "hinge",
+      "body": "right_wrist_pitch_link",
+      "parent_body": "right_wrist_roll_link",
+      "branch": "right_arm",
+      "axis": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -1.61443,
+        1.61443
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "right_wrist_pitch"
+    },
+    {
+      "index": 29,
+      "name": "right_wrist_yaw_joint",
+      "joint_type": "hinge",
+      "body": "right_wrist_yaw_link",
+      "parent_body": "right_wrist_pitch_link",
+      "branch": "right_arm",
+      "axis": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "limited": true,
+      "range_rad": [
+        -1.61443,
+        1.61443
+      ],
+      "qpos0": [
+        0.0
+      ],
+      "actuator": "right_wrist_yaw"
+    }
+  ],
+  "validations": {
+    "29_actuated_joints": true,
+    "left_arm_7dof": true,
+    "right_arm_7dof": true,
+    "left_leg_6dof_chain": true,
+    "right_leg_6dof_chain": true,
+    "waist_3dof": true,
+    "all_arrays_finite": true,
+    "all_hinges_actuated": true
+  },
+  "pedal_capability_status": "Both six-joint leg chains are structurally complete; actual pedal reachability and contact capability remain unverified until Phase 5."
+}

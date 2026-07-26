@@ -1,0 +1,44 @@
+{
+  "phase": 1,
+  "status": "passed",
+  "mujoco_version": "3.10.0",
+  "models": {
+    "g1_29dof": {
+      "bodies_including_world": 31,
+      "physical_bodies": 30,
+      "joints_including_floating_base": 30,
+      "actuated_hinge_joints": 29,
+      "qpos": 36,
+      "dofs": 35,
+      "actuators": 29,
+      "sensors": 95,
+      "keyframes": 0
+    },
+    "o6_left": {
+      "bodies_including_world": 12,
+      "joints": 11,
+      "qpos": 11,
+      "dofs": 11,
+      "actuators": 0,
+      "sensors": 0,
+      "dynamic_mass_kg": 0.04656258898666621,
+      "arrays_finite": true
+    },
+    "o6_right": {
+      "bodies_including_world": 12,
+      "joints": 11,
+      "qpos": 11,
+      "dofs": 11,
+      "actuators": 0,
+      "sensors": 0,
+      "dynamic_mass_kg": 0.046555421544547004,
+      "arrays_finite": true
+    }
+  },
+  "screenshots": {
+    "g1": "reports\\screenshots\\g1_original.png",
+    "o6_left": "reports\\screenshots\\o6_left_original.png",
+    "o6_right": "reports\\screenshots\\o6_right_original.png"
+  },
+  "known_limitation": "Raw O6 root-link mass is not preserved by fixed-root URDF compilation."
+}

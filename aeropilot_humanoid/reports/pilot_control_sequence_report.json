@@ -1,0 +1,133 @@
+{
+  "status": "passed_kinematic_control_sequence",
+  "source_scene": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\models\\scenes\\pilot_control_action.xml",
+  "source_model": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\models\\derived\\pilot\\g1_o6_cockpit_action.xml",
+  "frame_count": 12,
+  "duration_s": 1.0,
+  "keyframes": [
+    "pilot_ready_on_controls",
+    "left_hand_pushes_throttle_forward",
+    "left_thumb_toggles_throttle_switch",
+    "right_hand_deflects_control_stick"
+  ],
+  "start_controls": {
+    "throttle_m": 0.02,
+    "stick_pitch_rad": 0.0,
+    "stick_roll_rad": 0.0
+  },
+  "end_controls": {
+    "throttle_m": 0.14,
+    "stick_pitch_rad": -0.22,
+    "stick_roll_rad": -0.12
+  },
+  "control_motion": {
+    "throttle_delta_m": 0.12000000000000001,
+    "stick_pitch_delta_rad": -0.22,
+    "stick_roll_delta_rad": -0.12
+  },
+  "max_tracking_error_m": {
+    "left_hand_to_throttle": 0.009681236346207017,
+    "right_hand_to_stick": 0.007837779384510359
+  },
+  "validation_threshold_m": 0.04,
+  "samples": [
+    {
+      "time_s": 0.0,
+      "throttle_m": 0.02,
+      "stick_pitch_rad": 0.0,
+      "stick_roll_rad": 0.0,
+      "left_hand_to_throttle_m": 0.008944852748392337,
+      "right_hand_to_stick_m": 0.004638380758173641
+    },
+    {
+      "time_s": 0.09090909090909091,
+      "throttle_m": 0.04190833959429001,
+      "stick_pitch_rad": 0.0,
+      "stick_roll_rad": 0.0,
+      "left_hand_to_throttle_m": 0.009302151900363887,
+      "right_hand_to_stick_m": 0.004638380758173641
+    },
+    {
+      "time_s": 0.18181818181818182,
+      "throttle_m": 0.08815927873779113,
+      "stick_pitch_rad": 0.0,
+      "stick_roll_rad": 0.0,
+      "left_hand_to_throttle_m": 0.007521219917956479,
+      "right_hand_to_stick_m": 0.004638380758173641
+    },
+    {
+      "time_s": 0.2727272727272727,
+      "throttle_m": 0.12954169797145004,
+      "stick_pitch_rad": 0.0,
+      "stick_roll_rad": 0.0,
+      "left_hand_to_throttle_m": 0.008068804373771712,
+      "right_hand_to_stick_m": 0.004638380758173641
+    },
+    {
+      "time_s": 0.36363636363636365,
+      "throttle_m": 0.14,
+      "stick_pitch_rad": 0.0,
+      "stick_roll_rad": 0.0,
+      "left_hand_to_throttle_m": 0.009681236346206925,
+      "right_hand_to_stick_m": 0.00463838075817364
+    },
+    {
+      "time_s": 0.45454545454545453,
+      "throttle_m": 0.14,
+      "stick_pitch_rad": 0.0,
+      "stick_roll_rad": 0.0,
+      "left_hand_to_throttle_m": 0.009681236346206925,
+      "right_hand_to_stick_m": 0.004638380758173641
+    },
+    {
+      "time_s": 0.5454545454545454,
+      "throttle_m": 0.14,
+      "stick_pitch_rad": 0.0,
+      "stick_roll_rad": 0.0,
+      "left_hand_to_throttle_m": 0.009681236346206934,
+      "right_hand_to_stick_m": 0.004638380758173641
+    },
+    {
+      "time_s": 0.6363636363636364,
+      "throttle_m": 0.14,
+      "stick_pitch_rad": 0.0,
+      "stick_roll_rad": 0.0,
+      "left_hand_to_throttle_m": 0.009681236346206925,
+      "right_hand_to_stick_m": 0.004638380758173641
+    },
+    {
+      "time_s": 0.7272727272727273,
+      "throttle_m": 0.14,
+      "stick_pitch_rad": -0.01917355371900823,
+      "stick_roll_rad": -0.010458302028549943,
+      "left_hand_to_throttle_m": 0.009681236346207017,
+      "right_hand_to_stick_m": 0.004933925185769478
+    },
+    {
+      "time_s": 0.8181818181818182,
+      "throttle_m": 0.14,
+      "stick_pitch_rad": -0.0950413223140496,
+      "stick_roll_rad": -0.05184072126220887,
+      "left_hand_to_throttle_m": 0.009681236346206925,
+      "right_hand_to_stick_m": 0.006524193056658512
+    },
+    {
+      "time_s": 0.9090909090909091,
+      "throttle_m": 0.14,
+      "stick_pitch_rad": -0.17983471074380158,
+      "stick_roll_rad": -0.09809166040570995,
+      "left_hand_to_throttle_m": 0.009681236346206925,
+      "right_hand_to_stick_m": 0.007548936381931549
+    },
+    {
+      "time_s": 1.0,
+      "throttle_m": 0.14,
+      "stick_pitch_rad": -0.22,
+      "stick_roll_rad": -0.12,
+      "left_hand_to_throttle_m": 0.009681236346206925,
+      "right_hand_to_stick_m": 0.007837779384510359
+    }
+  ],
+  "control_scope": "Kinematic robot-and-control playback generated from IK keyframes; it demonstrates the manipulation sequence without claiming learned force-closure grasping.",
+  "passed": true
+}

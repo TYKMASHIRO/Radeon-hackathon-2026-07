@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="bionic_pilot_control_action_scene">
+  <include file="../derived/pilot/g1_o6_cockpit_action.xml"/>
+</mujoco>

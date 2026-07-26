@@ -1,0 +1,6 @@
+timestep_s: 0.002
+gravity_m_s2: [0.0, 0.0, -9.81]
+mechanism_test_duration_s: 5.0
+render_width_px: 640
+render_height_px: 480
+

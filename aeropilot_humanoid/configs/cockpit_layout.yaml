@@ -1,0 +1,32 @@
+status: "Phase 4 adjustable test-rig seed; Phase 5 must optimize within the listed ranges."
+world_frame: {x: "aircraft forward", y: "aircraft left", z: "aircraft up"}
+platform:
+  center_m: [0.1, 0.0, 0.02]
+  half_size_m: [0.75, 0.55, 0.02]
+seat:
+  reference_m: [0.0, 0.0, 0.48]
+  fore_aft_search_m: [-0.15, 0.15]
+  height_search_m: [0.42, 0.62]
+  cushion_half_size_m: [0.24, 0.22, 0.04]
+  back_half_size_m: [0.035, 0.22, 0.30]
+  back_center_offset_m: [-0.225, 0.0, 0.28]
+  pelvis_support_half_size_m: [0.06, 0.035, 0.10]
+controls:
+  stick_base_m: [0.30, -0.28, 0.60]
+  stick_search_x_m: [0.20, 0.42]
+  stick_search_y_m: [-0.36, -0.20]
+  throttle_base_m: [0.25, 0.28, 0.62]
+  throttle_search_x_m: [0.16, 0.38]
+  throttle_search_y_m: [0.20, 0.36]
+  pedal_center_x_m: 0.48
+  pedal_search_x_m: [0.35, 0.62]
+  pedal_lateral_offset_m: 0.12
+  pedal_spacing_search_m: [0.18, 0.30]
+  pedal_height_m: 0.18
+  heel_support_height_m: 0.09
+cameras:
+  cockpit_overview:
+    position_m: [-0.9, -1.0, 1.15]
+    xyaxes: [0.72, -0.69, 0.0, 0.35, 0.36, 0.86]
+    fovy_deg: 55.0
+

@@ -1,0 +1,65 @@
+{
+  "phase": 5,
+  "status": "passed_geometric_action_storyboard",
+  "load_success": true,
+  "scene_load_success": true,
+  "output": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\models\\derived\\pilot\\g1_o6_cockpit_action.xml",
+  "scene": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\models\\scenes\\pilot_control_action.xml",
+  "local_control_fbx": {
+    "path": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\3d66.com_JDH5455235936.fbx",
+    "exists": true,
+    "size_bytes": 3364704,
+    "status": "Converted through Blender to split MuJoCo OBJ meshes. The pilot scene drives the converted model's throttle_joint, stick_roll_joint, and stick_pitch_joint directly."
+  },
+  "converted_control_xml": {
+    "path": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\models\\derived\\cockpit\\imported_3d66\\fbx_controls.xml",
+    "exists": true,
+    "imported_into_action_scene": true
+  },
+  "online_humanoid_sources": {
+    "unitree_g1": "https://github.com/unitreerobotics/unitree_mujoco",
+    "unitree_g1_description": "https://github.com/unitreerobotics/unitree_ros",
+    "linkerhand_o6": "https://github.com/linker-bot/linkerhand-urdf"
+  },
+  "keyframes": [
+    "pilot_ready_on_controls",
+    "left_hand_pushes_throttle_forward",
+    "left_thumb_toggles_throttle_switch",
+    "right_hand_deflects_control_stick"
+  ],
+  "counts": {
+    "joints": 59,
+    "qpos": 65,
+    "actuators": 29,
+    "equalities": 11,
+    "keyframes": 4
+  },
+  "reach_errors_m": {
+    "pilot_ready_on_controls": {
+      "left_hand_to_throttle_m": 0.008944852747197415,
+      "right_hand_to_stick_m": 0.0048766688860475745
+    },
+    "left_hand_pushes_throttle_forward": {
+      "left_hand_to_throttle_m": 0.00968123635021057,
+      "right_hand_to_stick_m": 0.004876668886047574
+    },
+    "left_thumb_toggles_throttle_switch": {
+      "left_hand_to_throttle_m": 0.009681236350210561,
+      "right_hand_to_stick_m": 0.004876668886047595
+    },
+    "right_hand_deflects_control_stick": {
+      "left_hand_to_throttle_m": 0.00968123635021057,
+      "right_hand_to_stick_m": 0.004175143970890037
+    }
+  },
+  "max_reach_error_m": 0.00968123635021057,
+  "validation_threshold_m": 0.03,
+  "action_scope": "Geometric keyframe storyboard for humanoid pilot manipulation; contact-rich grasping and policy control remain unclaimed.",
+  "passed": true,
+  "screenshots": [
+    "reports\\screenshots\\pilot_action\\01_pilot_ready_on_controls.png",
+    "reports\\screenshots\\pilot_action\\02_left_hand_pushes_throttle_forward.png",
+    "reports\\screenshots\\pilot_action\\03_left_thumb_toggles_throttle_switch.png",
+    "reports\\screenshots\\pilot_action\\04_right_hand_deflects_control_stick.png"
+  ]
+}

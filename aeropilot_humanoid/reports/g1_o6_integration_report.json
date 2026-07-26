@@ -1,0 +1,94 @@
+{
+  "phase": 3,
+  "status": "passed_with_adapter_cad_pending",
+  "load_success": true,
+  "scene_load_success": true,
+  "model_counts": {
+    "bodies_including_world": 57,
+    "joints_including_floating_base": 52,
+    "qpos": 58,
+    "dofs": 57,
+    "actuators": 29,
+    "sensors": 95,
+    "equalities": 10
+  },
+  "mass": {
+    "official_g1_with_rubber_hands_kg": 35.112142000000006,
+    "removed_rubber_hand_mass_reference_kg_each": 0.17,
+    "replacement_wrist_yaw_mass_kg_each": {
+      "left": 0.08457647,
+      "right": 0.08457647
+    },
+    "expected_combined_kg": 34.999955253957815,
+    "actual_combined_kg": 34.99995525395781,
+    "absolute_error_kg": 7.105427357601002e-15,
+    "preserved_without_duplication": true
+  },
+  "frames": {
+    "left": {
+      "position_m": [
+        0.04150000000000002,
+        0.003000000000000006,
+        -5.514184486625495e-18
+      ],
+      "position_error_m": 2.237418089855931e-17,
+      "rotation_matrix": [
+        [
+          3.0777668713125422e-18,
+          -1.019240061191832e-16,
+          1.0000000000000004
+        ],
+        [
+          -1.0000000000000007,
+          -1.3535412461701253e-16,
+          3.456353988322831e-17
+        ],
+        [
+          9.169813879663648e-17,
+          -1.0000000000000004,
+          -4.398927736485247e-17
+        ]
+      ],
+      "rotation_max_abs_error": 6.661338147750939e-16,
+      "right_handed_determinant": 1.0000000000000016
+    },
+    "right": {
+      "position_m": [
+        0.04150000000000002,
+        -0.003000000000000006,
+        -5.514184486625495e-18
+      ],
+      "position_error_m": 2.237418089855931e-17,
+      "rotation_matrix": [
+        [
+          3.0777668713125422e-18,
+          1.019240061191832e-16,
+          1.0000000000000004
+        ],
+        [
+          1.0000000000000007,
+          -1.3535412461701253e-16,
+          -3.456353988322831e-17
+        ],
+        [
+          9.169813879663648e-17,
+          1.0000000000000004,
+          -4.398927736485247e-17
+        ]
+      ],
+      "rotation_max_abs_error": 6.661338147750939e-16,
+      "right_handed_determinant": 1.0000000000000016
+    }
+  },
+  "contacts_at_initial_pose": [],
+  "rubber_hand_assets_removed": true,
+  "hand_actuators_added": 0,
+  "physical_adapter_hardware_status": "Mount frames are verified; adapter plate geometry/mass requires measured CAD.",
+  "output": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\models\\derived\\humanoid\\g1_o6_full.xml",
+  "scene": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\models\\scenes\\g1_o6_test.xml",
+  "passed": true,
+  "screenshots": [
+    "reports\\screenshots\\g1_o6_combined.png",
+    "reports\\screenshots\\g1_o6_wrists.png"
+  ]
+}

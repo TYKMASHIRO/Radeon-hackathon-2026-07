@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="o6_left_standalone_test">
+  <include file="../derived/hands/o6_left.xml"/>
+</mujoco>

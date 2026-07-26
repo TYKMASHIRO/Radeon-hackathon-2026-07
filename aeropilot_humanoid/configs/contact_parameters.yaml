@@ -1,0 +1,5 @@
+default_friction: [0.8, 0.01, 0.0001]
+seat_friction: [0.9, 0.01, 0.0001]
+control_surface_friction: [0.7, 0.01, 0.0001]
+status: "Initial engineering values; calibrate from hardware measurements before final validation."
+

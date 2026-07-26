@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="g1_dual_o6_standalone_test">
+  <include file="../derived/humanoid/g1_o6_full.xml"/>
+</mujoco>

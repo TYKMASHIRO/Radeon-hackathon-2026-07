@@ -1,0 +1,54 @@
+generated_on: "2026-07-16"
+policy: "Official source trees are unmodified; all adaptations go to models/derived."
+sources:
+  unitree_mujoco:
+    repository: "https://github.com/unitreerobotics/unitree_mujoco.git"
+    branch: "main"
+    commit: "ae6a8403e272733e9996ef59990880330496177f"
+    commit_date: "2026-06-04T21:10:20+08:00"
+    downloaded_on: "2026-07-16"
+    license: "BSD-3-Clause"
+    license_copy: "third_party/licenses/unitree_mujoco_LICENSE"
+    files:
+      - "unitree_robots/g1/g1_29dof.xml"
+      - "unitree_robots/g1/meshes/"
+    modified: false
+  unitree_ros:
+    repository: "https://github.com/unitreerobotics/unitree_ros.git"
+    branch: "master"
+    commit: "d96d8f63ae17a7108d4f7229c00ef875ba7129c9"
+    commit_date: "2026-07-08T17:30:46+08:00"
+    downloaded_on: "2026-07-16"
+    license: "BSD-3-Clause"
+    license_copy: "third_party/licenses/unitree_ros_LICENSE"
+    files:
+      - "robots/g1_description/g1_29dof.urdf"
+      - "robots/g1_description/g1_29dof_with_hand.urdf"
+    purpose: "Official wrist-yaw, removable rubber-hand inertia, mount-frame, and hand-axis reference; not a replacement for the mandated MuJoCo model."
+    modified: false
+  linkerhand_urdf:
+    repository: "https://github.com/linker-bot/linkerhand-urdf.git"
+    branch: "main"
+    commit: "735145e8843f44d85c1464725e6971ba97a6258e"
+    commit_date: "2026-06-05T14:57:25+08:00"
+    downloaded_on: "2026-07-16"
+    license: "Apache-2.0"
+    license_copy: "third_party/licenses/linkerhand-urdf_LICENSE"
+    files:
+      - "o6/left/linkerhand_o6_left.urdf"
+      - "o6/left/meshes/"
+      - "o6/right/linkerhand_o6_right.urdf"
+      - "o6/right/meshes/"
+    modified: false
+  linkerhand_ros2_sdk:
+    repository: "https://github.com/linker-bot/linkerhand-ros2-sdk.git"
+    branch: "main"
+    commit: "5f4f36c660843f7fc26990348d49b402ed9fac48"
+    commit_date: "2026-06-08T11:44:37+08:00"
+    downloaded_on: "2026-07-16"
+    license: "Apache-2.0"
+    license_copy: "third_party/licenses/linkerhand-ros2-sdk_LICENSE"
+    files:
+      - "README.md"
+      - "linker_hand_ros2_sdk/"
+    modified: false

@@ -1,0 +1,55 @@
+{
+  "output": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\models\\derived\\pilot\\g1_o6_hand_follow_controls.xml",
+  "scene": "D:\\chuav\\Bionic_Pilot_ATRI\\Radeon-hackathon-2026-07\\aeropilot_humanoid\\models\\scenes\\hand_follow_controls.xml",
+  "load_success": true,
+  "actuators": 32,
+  "added_actuators": [
+    "stick_pitch_hand_follow",
+    "stick_roll_hand_follow",
+    "throttle_hand_follow"
+  ],
+  "joint_axes": {
+    "stick": [
+      "roll",
+      "pitch"
+    ],
+    "throttle": [
+      "aircraft_forward_x"
+    ]
+  },
+  "passed": true,
+  "status": "passed_hand_position_follow",
+  "duration_s": 3.0,
+  "step_count": 1501,
+  "initial_controls": {
+    "stick_roll_joint": 0.0,
+    "stick_pitch_joint": 0.0,
+    "throttle_joint": 0.02
+  },
+  "final_targets": {
+    "stick_roll_joint": -0.11481868145933263,
+    "stick_pitch_joint": -0.2386394375797544,
+    "throttle_joint": 0.1326651074574585
+  },
+  "final_controls": {
+    "stick_roll_joint": -0.11031954329312928,
+    "stick_pitch_joint": -0.228796089831405,
+    "throttle_joint": 0.13103264817084725
+  },
+  "final_abs_error": {
+    "stick_roll_joint": 0.004499138166203356,
+    "stick_pitch_joint": 0.009843347748349385,
+    "throttle_joint": 0.0016324592866112375
+  },
+  "control_motion": {
+    "stick_roll_joint": -0.11031954329312928,
+    "stick_pitch_joint": -0.228796089831405,
+    "throttle_joint": 0.11103264817084725
+  },
+  "throttle_cross_axis_error_m": 0.0,
+  "coordinate_frame": {
+    "x": "aircraft_forward",
+    "y": "aircraft_left",
+    "z": "aircraft_up"
+  }
+}
